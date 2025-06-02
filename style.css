@@ -1,0 +1,139 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  background-color: #4b0082;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.header-content h1 {
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  padding: 0.6rem;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background-color: #eee;
+}
+
+/* Genre Filter Buttons */
+.genre-filter {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.filter-btn {
+  background-color: #ddd;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  cursor: not-allowed; /* since not functional yet */
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #bbb;
+}
+
+.filter-btn.active {
+  background-color: #4b0082;
+  color: white;
+}
+
+/* Book Cards Grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.book-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.book-card h3 {
+  margin: 0.8rem 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.book-card .genre {
+  font-style: italic;
+  color: #666;
+}
+
+.price {
+  color: #b12704;
+  font-weight: bold;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* No Results */
+.no-results {
+  display: none; /* Simulated; enable via JS later */
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem;
+  color: #888;
+}
+
+/* Footer */
+footer {
+  background-color: #4b0082;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .search-bar {
+    width: 100%;
+  }
+
+  .filter-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
